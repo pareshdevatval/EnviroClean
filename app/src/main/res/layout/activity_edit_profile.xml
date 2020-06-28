@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        tools:context=".ui.activity.EditProfileActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_toolbar"
+            android:padding="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <com.enviroclean.customeview.CircleImageView
+                android:id="@+id/ivUser"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_110sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSelected"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_100sdp"
+                app:layout_constraintTop_toTopOf="@id/ivUser"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_82sdp"
+                app:layout_constraintStart_toStartOf="@id/ivUser"
+                android:layout_marginBottom="@dimen/_25sdp"
+                app:layout_constraintBottom_toBottomOf="@id/ivUser"
+                app:layout_constraintEnd_toEndOf="@id/ivUser"
+                app:srcCompat="@drawable/ic_camera_blue" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clImageView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingBottom="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/tvUserName"
+                    style="@style/editTextStyle"
+                    android:layout_width="match_parent"
+                    android:maxLength="40"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/single_bottom_edit_text"
+                    android:drawableStart="@drawable/ic_user_blue"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/hint_Name"
+                    android:inputType="text"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:visibility="gone"
+                    android:id="@+id/edtEmail"
+                    android:editable="false"
+                    android:focusable="false"
+                    style="@style/editTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/single_bottom_edit_text"
+                    android:drawableStart="@drawable/ic_mail"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintTop_toBottomOf="@id/tvUserName" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtPhone"
+                    android:editable="false"
+                    android:visibility="gone"
+                    android:focusable="false"
+                    style="@style/editTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/single_bottom_edit_text"
+                    android:drawableStart="@drawable/ic_mobile_blue"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/hint_mobile_number"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    app:layout_constraintTop_toBottomOf="@id/edtEmail" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtAddress"
+                    style="@style/small_poppinsl_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/single_bottom_edit_text"
+                    android:drawableStart="@drawable/ic_address_blue"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/hint_address"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/_7sdp"
+                    android:maxLength="249"
+                    android:textColor="@color/edit_text_color"
+                    android:textColorHint="@color/edit_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/edtDob"
+                    app:layout_constraintTop_toBottomOf="@id/edtPhone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/edtDob"
+                    style="@style/editTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:drawableStart="@drawable/ic_dob_blue"
+                    android:drawableEnd="@drawable/ic_calendr_profile"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:hint="@string/hint_dob"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintTop_toBottomOf="@id/edtAddress" />
+
+                <RadioGroup
+                    android:id="@+id/rbGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtDob">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbMale"
+                        style="@style/small_poppinsl_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@android:color/transparent"
+                        android:checked="true"
+                        android:drawableTop="@drawable/male_selector"
+                        android:text="@string/lbl_male"
+                        android:textColor="@color/Black_title"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbFeMale"
+                        style="@style/small_poppinsl_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_40sdp"
+                        android:button="@android:color/transparent"
+                        android:drawableTop="@drawable/female_selector"
+                        android:text="@string/lbl_female"
+                        android:textColor="@color/Black_title"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/transGender"
+                        style="@style/small_poppinsl_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_40sdp"
+                        android:button="@android:color/transparent"
+                        android:drawableTop="@drawable/transgender_selector"
+                        android:text="@string/lbl_other"
+                        android:textColor="@color/Black_title"
+                        android:textSize="@dimen/_12ssp" />
+
+
+                </RadioGroup>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    style="@style/blueButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:background="@drawable/blue_solid_rounded"
+                    android:text="@string/lbl_submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/rbGroup" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

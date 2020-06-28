@@ -1,0 +1,44 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">24dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="toolbar_horizontal_padding">8dp</dimen>
+    <dimen name="toolbar_item_horizontal_padding">8dp</dimen>
+
+    <dimen name="app_button_height">@dimen/_40sdp</dimen>
+    <dimen name="rounded_corner_button_height">@dimen/_32sdp</dimen>
+    <dimen name="sub_label_textSize">@dimen/regular</dimen>
+
+
+    <!--text dimension-->
+    <dimen name="tiny">@dimen/_8ssp</dimen>
+    <dimen name="small">@dimen/_12ssp</dimen>
+    <dimen name="regular">@dimen/_14ssp</dimen>
+    <dimen name="medium">@dimen/_16ssp</dimen>
+    <dimen name="medium2">@dimen/_18ssp</dimen>
+    <dimen name="large">@dimen/_20ssp</dimen>
+    <dimen name="extra_large">@dimen/_24ssp</dimen>
+    <dimen name="huge">@dimen/_30ssp</dimen>
+
+    <!--padding dimension-->
+    <dimen name="tiny_padding">@dimen/_2sdp</dimen>
+    <dimen name="small_padding">@dimen/_4sdp</dimen>
+    <dimen name="regular_padding">@dimen/_6sdp</dimen>
+    <dimen name="medium_padding">@dimen/_8sdp</dimen>
+    <dimen name="large_padding">@dimen/_10sdp</dimen>
+    <dimen name="extra_large_padding">@dimen/_12sdp</dimen>
+    <dimen name="huge_padding">@dimen/_14sdp</dimen>
+    <dimen name="extra_huge_padding">@dimen/_20sdp</dimen>
+    <dimen name="big_padding">@dimen/_30sdp</dimen>
+    <dimen name="highest_padding">@dimen/_40sdp</dimen>
+
+    <!--tab dimension>-->
+    <dimen name="tab_max_width">264dp</dimen>
+    <dimen name="tab_padding_bottom">16dp</dimen>
+    <dimen name="tab_label">14sp</dimen>
+    <dimen name="custom_tab_layout_height">72dp</dimen>
+    <dimen name="registration_field_margin_top">@dimen/huge_padding</dimen>
+
+    <dimen name="radius">180dp</dimen>
+</resources>

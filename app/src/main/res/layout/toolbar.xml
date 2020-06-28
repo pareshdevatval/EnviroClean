@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue_toolbar"
+        android:clipChildren="false"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/toolbar_horizontal_padding"
+        android:paddingEnd="@dimen/toolbar_horizontal_padding">
+
+        <!--TextView menu in left side of toolbar-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_toolbar_lift_txt_menu"
+            style="@style/reg_poppins_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="@dimen/toolbar_item_horizontal_padding"
+            android:paddingEnd="@dimen/toolbar_item_horizontal_padding"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--Title on the center of the toolbar-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_toolbar_title"
+            style="@style/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/toolbar_item_horizontal_padding"
+            android:paddingEnd="@dimen/toolbar_item_horizontal_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:background="@color/white"
+            android:textColor="@color/black_1"
+            android:textSize="@dimen/_14ssp"
+            android:padding="@dimen/_3sdp"
+            style="@style/reg_poppins_reg"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:id="@+id/etSearch"
+            android:drawableRight="@drawable/ic_clear_white"
+            android:drawableLeft="@drawable/ic_back_black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <!--Toolbar left icon (Most probably would be the back icon)-->
+        <com.enviroclean.customeview.RippleEffectImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/toolbar_item_horizontal_padding"
+            android:paddingEnd="@dimen/toolbar_item_horizontal_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Group that will contain the right side menu icons-->
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gr_menu_icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="iv_right,iv_right1" />
+
+        <!--Right most icon of toolbar-->
+        <com.enviroclean.customeview.RippleEffectImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/toolbar_item_horizontal_padding"
+            android:paddingEnd="@dimen/toolbar_item_horizontal_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--second right icon from right-->
+        <com.enviroclean.customeview.RippleEffectImageView
+            android:id="@+id/iv_right1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/toolbar_item_horizontal_padding"
+            android:paddingEnd="@dimen/toolbar_item_horizontal_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_right"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.enviroclean.customeview.RippleEffectImageView
+            android:id="@+id/iv_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/toolbar_item_horizontal_padding"
+            android:paddingEnd="@dimen/toolbar_item_horizontal_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_right"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:visibility="gone"
+            android:id="@+id/tvNotificationCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/white_dote_round"
+            android:padding="@dimen/_1sdp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_7ssp"
+            app:layout_constraintEnd_toEndOf="@id/iv_right1"
+            app:layout_constraintStart_toStartOf="@id/iv_right1"
+            app:layout_constraintTop_toTopOf="@id/iv_right1" />
+        <!--TextView menu in right side of toolbar-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_toolbar_right_txt_menu"
+            style="@style/reg_poppins_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="@dimen/toolbar_item_horizontal_padding"
+            android:paddingEnd="@dimen/toolbar_item_horizontal_padding"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

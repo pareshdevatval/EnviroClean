@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        tools:context=".ui.activity.ChangePasswordActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_marginTop="56dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_marginTop="@dimen/_20sdp"
+               android:id="@+id/tvAreaName"
+               android:textColor="@color/blue_2"
+               style="@style/poppins_semi_bold"
+               android:textSize="@dimen/_16ssp"
+               android:layout_width="wrap_content"
+               android:text="@string/lbl_area_name"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               android:layout_height="wrap_content"/>
+
+
+           <com.google.android.material.chip.ChipGroup
+               android:id="@+id/chipGroup"
+               app:chipSpacingVertical="@dimen/_6sdp"
+               app:chipSpacingHorizontal="@dimen/_4sdp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/tvAreaName"
+               android:layout_width="0dp"
+               app:singleSelection="true"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp">
+
+           </com.google.android.material.chip.ChipGroup>
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_marginTop="@dimen/_20sdp"
+               android:id="@+id/tvViolationReason"
+               app:layout_constraintTop_toBottomOf="@id/chipGroup"
+               android:textColor="@color/blue_2"
+               style="@style/poppins_semi_bold"
+               android:textSize="@dimen/_16ssp"
+               android:layout_width="wrap_content"
+               android:text="@string/lbl_violation_reason"
+               app:layout_constraintStart_toStartOf="parent"
+               android:layout_height="wrap_content"/>
+
+
+           <RadioGroup
+               android:id="@+id/radioGroupAds"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_15sdp"
+               android:layout_marginTop="@dimen/_8sdp"
+               android:layout_marginEnd="@dimen/_15sdp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/tvViolationReason"/>
+       </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

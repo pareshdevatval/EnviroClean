@@ -1,0 +1,272 @@
+<resources>
+    <string name="app_name">EnviroClean</string>
+    <string name="action_retry">RETRY</string>
+    <string name="msg_no_internet">Internt not available</string>
+
+    <!--Common Validation Messages-->
+    <string name="blank_data">Please enter data</string>
+
+    <string name="blank_email_or_cellphone">Please enter email or Phone number</string>
+    <string name="blank_username">Please enter username</string>
+    <string name="blank_email">Please enter email address</string>
+    <string name="blank_first_name">Please enter first name</string>
+    <string name="blank_last_name">Please enter last name</string>
+    <string name="blank_phone">Please enter phone number</string>
+    <string name="blank_password">Please enter password</string>
+    <string name="lbl_enter_user_name">Please enter your name</string>
+    <string name="blank_current_password">Please enter current password</string>
+    <string name="blank_new_password">Please enter new password</string>
+    <string name="blank_confirm_password">Please enter confirm password</string>
+
+    <string name="blank_title">Please enter title</string>
+    <string name="blank_desc">Please enter description</string>
+    <string name="blank_address">Please select valid address</string>
+    <string name="blank_assign_to">Please select assign to</string>
+
+    <string name="invalid">Invalid data</string>
+    <string name="msg_all_field_required">All fields are required.</string>
+    <string name="invalid_email">Please enter valid Email ID OR Phone number</string>
+    <string name="invalid_email_">Please enter valid Email ID</string>
+    <string name="invalid_confirm_password">Password and confirm password does not match</string>
+    <string name="invalid_password">Password length should be minimum 6 characters.</string>
+    <string name="invalid_current_password">Current Password length should be minimum 6 characters.</string>
+    <string name="invalid_new_password">New Password length should be minimum 6 characters.</string>
+    <string name="invalid_confirmpassword">Confirm Password length should be minimum 6 characters.</string>
+
+    <string name="blank_name">Please enter Name</string>
+    <string name="blank_billing_add">Please enter billing address</string>
+    <string name="blank_billing_city">Please select your city</string>
+    <string name="blank_billing_state">Please select your state</string>
+    <string name="blank_billing_zipcode">Please enter your zipcode</string>
+    <string name="blank_cellular_phone">Please enter your number</string>
+    <string name="blank_email_address">Please enter your email address</string>
+    <string name="blank_card_holder_name">Please enter card holder name</string>
+    <string name="blank_card_number">Please enter card holder number</string>
+    <string name="blank_expiration_date">Please select date</string>
+    <string name="blank_cvv">Please enter CVV</string>
+    <string name="blank_subject">Please enter subject</string>
+    <string name="blank_messages">Please enter messages</string>
+    <string name="invalid_phone">Please enter number between 10&#8211;15 digits.</string>
+
+    <string name="close">Close</string>
+
+
+    <string name="tutorial_one">Scan QR</string>
+    <string name="tutorial_description_one">Scan QR placed in receptacles and see if any violation.</string>
+
+    <string name="tutorial_two">Collect trashes</string>
+    <string name="tutorial_description_two">Collect trashes from receptacles.</string>
+
+    <string name="tutorial_three">Add Violation</string>
+    <string name="tutorial_description_three">Add violation report as soon as you see something fishy.</string>
+
+
+    <!-- Login Screen -->
+    <string name="lbl_login">Login</string>
+    <string name="hint_email_or_phone_number">Email / Phone Number</string>
+    <string name="hint_password">Password</string>
+    <string name="lbl_remember_me">Remember Me</string>
+    <string name="lbl_forgot_password_">Forgot Password?</string>
+    <string name="lbl_sign_in">Sign in</string>
+
+
+    <!-- Forgot Password -->
+    <string name="lbl_forgot_desc">Enter your Email, We will send new\npassword to your Email.</string>
+    <string name="hint_email">Email</string>
+    <string name="lbl_send">Send</string>
+
+    <!-- Manager Home Screen-->
+    <string name="lbl_work_assignment">Work Assignments</string>
+    <string name="lbl_valets_work">Valets Work</string>
+    <string name="lbl_my_work">My Work</string>
+
+    <!-- Chat Screen -->
+    <string name="lbl_chat">Chats</string>
+    <string name="lbl_current_community">Current Community</string>
+    <string name="lbl_others">Others</string>
+
+    <!-- Profile Screen -->
+    <string name="lbl_my_profile">My Profile</string>
+
+    <!-- Violation-->
+    <string name="lbl_violation">Photo</string>
+
+    <!-- Notification -->
+    <string name="lbl_notifications">Notifications</string>
+
+    <!-- Profile Screen / Edit Profile -->
+    <string name="lbl_enable_touch_id">Enable Touch Id</string>
+    <string name="lbl_total_hours">Total Hours</string>
+    <string name="lbl_avg_per_day">Avg. per day</string>
+    <string name="lbl_total_days">Total days</string>
+    <string name="lbl_edit_profile">Edit Profile</string>
+    <string name="hint_Name">Name</string>
+    <string name="hint_mobile_number">Mobile Number</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_dob">Date of Birth</string>
+    <string name="lbl_male">Male</string>
+    <string name="lbl_female">Female</string>
+    <string name="lbl_other">Other</string>
+
+
+    <!-- Change password-->
+    <string name="lbl_change_password">Change Password</string>
+    <string name="hint_current_password">Current Password</string>
+    <string name="hint_new_password">New Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="lbl_submit">Submit</string>
+
+    <!-- My Pay Stub -->
+    <string name="lbl_total_earnings">Total Earnings</string>
+    <string name="lbl_download_pdf">Download PDF</string>
+    <string name="lbl_my_pay_stub">My Paystub</string>
+
+    <!--checking screen-->
+    <string name="lbl_remaining">Remaining</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!--cq code screen-->
+    <string name="lbl_scan_cq">Scan QR</string>
+    <string name="lbl_pick_up">QR Scan</string>
+
+    <!--violation screen-->
+    <string name="lbl_select_violation">Select Reason</string>
+    <string name="lbl_select_area">Select Area</string>
+    <string name="lbl_unit_no">Unit No.</string>
+    <string name="lbl_description">Description</string>
+    <string name="lbl_eneter_unit_no">Enter unit No.</string>
+    <string name="lbl_eneter_description">Enter description</string>
+
+    <string name="lbl_you_are_not_allow">You are not allowed to check-in except today schedule.</string>
+    <string name="lbl_you_are_not_allow_week">You are not allowed to check-in except week schedule.</string>
+    <string name="lbl_countdown">CountDown</string>
+
+    <string name="chat_user_name">%1$s %2$s</string>
+    <string name="unit_no">Unit No. %1$s</string>
+    <string name="violation_name">%1$s > %2$s</string>
+
+    <!--violation report screen-->
+    <string name="lbl_violation_report">Photo Report List</string>
+    <string name="lbl_description_">Description :</string>
+    <string name="lbl_sent_to_client">Send to Client</string>
+    <string name="lbl_scan_qr_is_different">Scan QR is different.</string>
+
+
+    <!--[start]violation screen reason-->
+    <string name="lbl_1">Receptacle left out during non-collection hours</string>
+    <string name="lbl_2">Contents not inside of the provided receptacle</string>
+    <string name="lbl_3">Common area/Pet waste can</string>
+    <string name="lbl_4">Light audit</string>
+    <string name="lbl_5">Trash set out late</string>
+    <string name="lbl_6">Trash not in tied, plastic bags</string>
+    <string name="lbl_7">Cardboard not flattened and bound</string>
+    <string name="lbl_8">Bags picked up</string>
+    <string name="lbl_9">Unit Audit</string>
+    <string name="lbl_10">Bag ripping/Too heavy</string>
+    <string name="lbl_11">Bulk items</string>
+    <string name="lbl_12">Receptacle delivery</string>
+    <string name="lbl_13">Contents not inside of the provided receptacle</string>
+    <string name="lbl_14">Cardboard not flattened and bundled together</string>
+    <string name="lbl_15">Other</string>
+    <string name="lbl_all_ready_scan">QR already violated</string>
+    <string name="lbl_sacn_qr">Scan QR</string>
+    <string name="lbl_sacn_qr_">For Photo check-in first</string>
+    <!--[end]violation screen reason-->
+
+    <!--[start]create schedule screen-->
+    <string name="lbl_create_schedule">Create Schedule</string>
+    <string name="lbl_selected_community">Select Community</string>
+    <string name="lbl_schedule_name">Schedule Name</string>
+    <string name="lbl_clock_in_time">Clock in Time</string>
+    <string name="lbl_clock_out_time">Clock out Time</string>
+    <string name="lbl_day_of_week">Day Of Week</string>
+    <string name="lbl_sun">Sun</string>
+    <string name="lbl_mon">Mon</string>
+    <string name="lbl_tue">Tue</string>
+    <string name="lbl_wed">Wed</string>
+    <string name="lbl_thu">Thu</string>
+    <string name="lbl_fri">Fri</string>
+    <string name="lbl_sat">Sat</string>
+    <string name="lbl_live_tacking">Live Tracking</string>
+    <string name="lbl_directions">Directions</string>
+    <!--[end]create schedule screen-->
+
+    <!-- Create Schedule -->
+    <string name="msg_please_select_community">Please select community</string>
+    <string name="msg_please_enter_schedule_name">Please enter schedule name</string>
+    <string name="msg_please_select_in_time">Please select clock in time.</string>
+    <string name="msg_please_select_out_time">Please select clock out time.</string>
+    <string name="msg_please_select_valid_time">Please select valid time.</string>
+    <string name="msg_please_select_days">Please select days of week.</string>
+
+    <!-- List of schedule-->
+    <string name="lbl_list_of_schedule">List of Schedule</string>
+    <string name="lbl_assign">Assign</string>
+
+    <!-- List of valets-->
+    <string name="lbl_list_of_valets">List of Valets</string>
+    <string name="hint_search_valet_name">Search Valet Name...</string>
+
+    <integer-array name="fab_menu_item_colors">
+        <item>@color/blue_toolbar</item>
+        <item>@color/Black_title</item>
+        <item>@color/green_1</item>
+        <!-- <item>@color/red</item>-->
+    </integer-array>
+
+    <!--filter screen-->
+    <string name="lbl_filter_options">Filter Options</string>
+    <string name="lbl_area_name">Area Name</string>
+    <string name="lbl_violation_reason">Violation Reason</string>
+    <string name="lbl_all">All</string>
+    <string name="lbl_apply">Apply</string>
+    <string name="lbl_cancel">Cancel</string>
+    <string name="lbl_clear_all">Clear All</string>
+
+    <!--finger preint screen-->
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_fingerprint">One-touch Sign In</string>
+    <string name="desc_fingerprint">Please place your fingertip on the scanner to verify your identity</string>
+    <string name="note">(Fingerprint sign in makes your app login much faster. Your device should have at least one fingerprint registered in device settings)</string>
+    <string name="title_activity_home">Fingerprint</string>
+    <string name="activity_home_desc">You have successfully logged in with fingerprint authentication</string>
+    <string name="activity_home_note">Close and re-open the app to see the fingerprint auth screen again</string>
+
+
+    <string name="geofence_unknown_error">
+    Unknown error: the Geofence service is not available now.
+  </string>
+    <string name="geofence_not_available">
+    Geofence service is not available now. Go to Settings>Location>Mode and choose High accuracy.
+  </string>
+    <string name="geofence_too_many_geofences">
+    Your app has registered too many geofences.
+  </string>
+    <string name="geofence_too_many_pending_intents">
+    You have provided too many PendingIntents to the addGeofences() call.
+  </string>
+
+    <string name="lbl_view_description">View Description</string>
+
+    <!--alert dialog-->
+    <string name="lbl_final_report">Final Report</string>
+    <string name="lbl_title">Title</string>
+    <string name="lbl_reason">Reason*</string>
+    <string name="lbl_enter_title">Enter Title</string>
+    <string name="lbl_selected_reason">Select Reason</string>
+
+    <string name="lbl_qr_all_ready_scan">This qr code is all ready scan</string>
+    <string name="hint_type_a_message">Type a message...</string>
+    <string name="okay">Okay</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+    <string name="lbl_notification_is_blank">No notifications yet No Worries!! \n  You will receive notifications \n soon!!!</string>
+    <string name="lbl_no_schedule">No Schedule Available</string>
+    <string name="lbl_ok">OK</string>
+    <string name="lbl_notification_clear">Are you sure delete clear all notification?</string>
+    <string name="turn_speaker_on">On</string>
+    <string name="callHint">Call</string>
+    <string name="callee">client identity or phone number</string>
+    <string name="lbl_selected_valets">Please select atlist one valet</string>
+
+
+</resources>

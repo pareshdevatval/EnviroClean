@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/_5sdp">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fitsSystemWindows="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvQrCodeNumber"
+                    style="@style/poppins_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_bin_black"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:padding="@dimen/_15sdp"
+                    android:textColor="@color/Black_title"
+                    android:textSize="@dimen/_15ssp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <HorizontalScrollView
+                    android:id="@+id/hsView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvQrCodeNumber">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/viewAddImages"
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/violation_line_rounded_view"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivAddDustBin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_add" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </HorizontalScrollView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvViolationImages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvQrCodeNumber"
+                    tools:listitem="@layout/item_violation_images" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSelectArea"
+                    style="@style/poppins_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableEnd="@drawable/ic_select_violation"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:singleLine="true"
+                    android:text="@string/lbl_select_area"
+                    android:textColor="@color/Black_title"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintTop_toBottomOf="@id/rvViolationImages" />
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@color/Black_title"
+                    app:layout_constraintEnd_toEndOf="@id/tvSelectViolation"
+                    app:layout_constraintStart_toStartOf="@id/tvSelectViolation"
+                    app:layout_constraintTop_toBottomOf="@id/tvSelectArea" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSelectViolation"
+                    style="@style/poppins_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:drawableEnd="@drawable/ic_select_violation"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:text="@string/lbl_select_violation"
+                    android:textColor="@color/Black_title"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintTop_toBottomOf="@id/view5" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@color/Black_title"
+                    app:layout_constraintEnd_toEndOf="@id/tvSelectViolation"
+                    app:layout_constraintStart_toStartOf="@id/tvSelectViolation"
+                    app:layout_constraintTop_toBottomOf="@id/tvSelectViolation" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clOther"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/tvSelectViolation"
+                    app:layout_constraintStart_toStartOf="@id/tvSelectViolation"
+                    app:layout_constraintTop_toBottomOf="@id/view1">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etOther"
+                        style="@style/poppins_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@null"
+                        android:hint="@string/lbl_others"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/Black_title"
+                        android:textColorHint="@color/Black_title"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@color/Black_title"
+                        app:layout_constraintEnd_toEndOf="@id/etOther"
+                        app:layout_constraintStart_toStartOf="@id/etOther"
+                        app:layout_constraintTop_toBottomOf="@id/etOther" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etUnitNo"
+                    style="@style/poppins_medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@null"
+                    android:hint="@string/lbl_unit_no"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/Black_title"
+                    android:textColorHint="@color/Black_title"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="@id/tvSelectViolation"
+                    app:layout_constraintStart_toStartOf="@id/tvSelectViolation"
+                    app:layout_constraintTop_toBottomOf="@id/clOther" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@color/Black_title"
+                    app:layout_constraintEnd_toEndOf="@id/tvSelectViolation"
+                    app:layout_constraintStart_toStartOf="@id/tvSelectViolation"
+                    app:layout_constraintTop_toBottomOf="@id/etUnitNo" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/tvDescription"
+                    style="@style/poppins_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="@string/lbl_description"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:maxLength="499"
+                    android:maxLines="5"
+                    android:overScrollMode="always"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textColor="@color/Black_title"
+                    android:textColorHint="@color/Black_title"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="@id/tvSelectViolation"
+                    app:layout_constraintStart_toStartOf="@id/tvSelectViolation"
+                    app:layout_constraintTop_toBottomOf="@id/view2" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/poppins_medium"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="@string/lbl_description"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    android:maxLength="499"
+                    android:maxLines="5"
+                    android:overScrollMode="always"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textColor="@color/Black_title"
+                    android:textColorHint="@color/Black_title"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/tvSelectViolation"
+                    app:layout_constraintStart_toStartOf="@id/tvSelectViolation"
+                    app:layout_constraintTop_toBottomOf="@id/view2" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/Black_title"
+                    app:layout_constraintEnd_toEndOf="@id/tvSelectViolation"
+                    app:layout_constraintStart_toStartOf="@id/tvSelectViolation"
+                    app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    style="@style/blueButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/blue_solid_rounded"
+                    android:text="@string/lbl_submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/tvSelectViolation"
+                    app:layout_constraintStart_toStartOf="@id/tvSelectViolation"
+                    app:layout_constraintTop_toBottomOf="@id/view3" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

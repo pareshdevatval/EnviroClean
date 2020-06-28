@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatRadioButton
+    android:background="@android:color/transparent"
+    android:id="@+id/radioButtonInappropriateContent"
+    style="@style/MyRadioButtonStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingBottom="10dp"
+    android:text="fdsfsfdsfs"
+    android:textAlignment="textStart"
+    android:textColor="@color/black_1"
+    android:textSize="@dimen/_13ssp"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

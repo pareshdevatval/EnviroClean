@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/view"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/_5sdp">
+
+        <com.enviroclean.customeview.CircleImageView
+            android:id="@+id/ivValets"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvValetName"
+            style="@style/poppins_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Community"
+            android:textColor="@color/Black_title"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toTopOf="@id/tvAssignCount"
+            app:layout_constraintStart_toEndOf="@id/ivValets"
+            app:layout_constraintTop_toTopOf="@id/ivValets" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAssignCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="3 Community Assigned"
+            android:textColor="@color/gray12"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@id/ivValets"
+            app:layout_constraintStart_toEndOf="@id/ivValets"
+            app:layout_constraintTop_toBottomOf="@id/tvValetName" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cbValet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:gravity="center"
+
+            app:layout_constraintBottom_toBottomOf="@id/ivValets"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:button="@drawable/valet_selector"
+            android:background="@null"
+            app:layout_constraintTop_toTopOf="@id/ivValets" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

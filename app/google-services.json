@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "24467417563",
+    "firebase_url": "https://enviro-clean-94199.firebaseio.com",
+    "project_id": "enviro-clean-94199",
+    "storage_bucket": "enviro-clean-94199.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24467417563:android:09702a597a3eaa22ae9ffe",
+        "android_client_info": {
+          "package_name": "com.enviroclean"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24467417563-5g1vl88kl8qusa0elo64465jdj8h1qo1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.enviroclean",
+            "certificate_hash": "113c5b75fdbd747c42a8ee2c7944dfdcac914f53"
+          }
+        },
+        {
+          "client_id": "24467417563-b0dmu8m3abk74t5t9b1k6aho50prnd92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF6JBcuaPAm6FjQIEfwXYxzOH7HjEe4QE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24467417563-b0dmu8m3abk74t5t9b1k6aho50prnd92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

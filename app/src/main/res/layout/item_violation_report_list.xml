@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/white"
+        android:padding="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBuildingName"
+            android:layout_width="wrap_content"
+            style="@style/poppins_medium"
+            android:textColor="@color/Black_title"
+            android:textSize="@dimen/_14ssp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvViolationName"
+            android:layout_width="wrap_content"
+            style="@style/poppins_medium"
+            android:textColor="@color/Black_title"
+            android:textSize="@dimen/_14ssp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tvBuildingName"
+            app:layout_constraintTop_toBottomOf="@id/tvBuildingName" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/ivIsSelectedOrNot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:button="@drawable/valet_selector"
+            android:elevation="@dimen/_2sdp"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvBuildingName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvViewDescription"
+            style="@style/poppins_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/blue_solid_rounded_three"
+            android:padding="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="@string/lbl_view_description"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toStartOf="@id/tvBuildingName"
+            app:layout_constraintTop_toBottomOf="@id/tvViolationName" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvViolationImages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/tvBuildingName"
+            app:layout_constraintTop_toBottomOf="@id/tvViewDescription" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserName"
+            style="@style/poppins_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/Black_title"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvViolationImages" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

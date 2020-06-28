@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewMain"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+      <com.enviroclean.customeview.CircleImageView
+          android:id="@+id/ivChatUser"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          android:layout_width="@dimen/_40sdp"
+          android:layout_height="@dimen/_40sdp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/poppins_medium"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/tvName"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/ivChatUser"
+            app:layout_constraintEnd_toEndOf="@id/ivChatUser"
+            app:layout_constraintStart_toStartOf="@id/ivChatUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

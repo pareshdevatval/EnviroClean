@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="com.enviroclean.model.CheckingResponse.Result.CommCheckinValet" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+      <com.enviroclean.customeview.CircleImageView
+          android:id="@+id/ivChatUser"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          android:layout_width="@dimen/_50sdp"
+          android:layout_height="@dimen/_50sdp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/poppins_medium"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/Black_title"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/tvFirstName"
+            android:singleLine="true"
+            android:text="@{data.u_first_name}"
+            android:lineSpacingMultiplier="0.7"
+            app:layout_constraintTop_toBottomOf="@id/ivChatUser"
+            app:layout_constraintEnd_toEndOf="@id/ivChatUser"
+            app:layout_constraintStart_toStartOf="@id/ivChatUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/poppins_medium"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/Black_title"
+            android:id="@+id/tvLastName"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="@{data.u_last_name}"
+            app:layout_constraintTop_toBottomOf="@id/tvFirstName"
+            app:layout_constraintEnd_toEndOf="@id/ivChatUser"
+            app:layout_constraintStart_toStartOf="@id/ivChatUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

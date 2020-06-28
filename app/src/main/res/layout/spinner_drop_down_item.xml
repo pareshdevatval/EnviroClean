@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/app_name"
+    style="@style/poppins_medium"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:singleLine="false"
+    android:textColor="@color/Black_title"
+    android:padding="@dimen/_5sdp">
+
+</androidx.appcompat.widget.AppCompatTextView>

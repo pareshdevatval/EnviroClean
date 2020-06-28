@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="loginActivity"
+            type="com.enviroclean.ui.activity.LoginActivity" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        tools:context=".ui.activity.LoginActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_18sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLoginTitle"
+                style="@style/titleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_login"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtEmailPhone"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:background="@drawable/single_bottom_edit_text"
+                android:drawableStart="@drawable/ic_mail"
+                android:drawablePadding="@dimen/_7sdp"
+                android:hint="@string/hint_email_or_phone_number"
+                android:inputType="textEmailAddress"
+                app:layout_constraintTop_toBottomOf="@id/tvLoginTitle" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtPassword"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/single_bottom_edit_text"
+                android:drawableStart="@drawable/ic_password"
+                android:drawableEnd="@drawable/ic_show_password"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:drawablePadding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/edtEmailPhone" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/chbRememberMe"
+                android:button="@drawable/checkbox_selector"
+                android:padding="@dimen/_7sdp"
+                style="@style/poppins_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_remember_me"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/edit_text_color"
+                app:layout_constraintBottom_toBottomOf="@id/btnForgotPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btnForgotPassword" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnForgotPassword"
+                style="@style/poppins_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:onClick="@{()->loginActivity.onForgotPasswordClick()}"
+                android:text="@string/lbl_forgot_password_"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/blue_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtPassword" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignIn"
+                style="@style/blueButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/blue_solid_rounded"
+                android:onClick="@{()->loginActivity.onSignInClick()}"
+                android:text="@string/lbl_sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/btnForgotPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

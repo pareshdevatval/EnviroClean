@@ -1,0 +1,201 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- enable window content transitions -->
+        <item name="android:windowContentTransitions">true</item>
+
+
+    </style>
+
+    <style name="AppTheme_Second" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="toolbarTitle" parent="poppins_medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <!--[START]tab layout style-->
+    <style name="TabTextStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/small</item>
+    </style>
+    <!--[START]tab layout style-->
+
+    <!--[START] Font styles-->
+    <style name="poppins_bold">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="poppins_semi_bold">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="poppins_regular">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="poppins_medium">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <!--style for arial regular-->
+    <style name="tiny_poppins_reg" parent="poppins_regular">
+        <item name="android:textSize">@dimen/tiny</item>
+    </style>
+
+    <style name="small_poppins_reg" parent="poppins_regular">
+        <item name="android:textSize">@dimen/small</item>
+    </style>
+
+    <style name="medium_poppins_reg" parent="poppins_regular">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <style name="reg_poppins_reg" parent="poppins_regular">
+        <item name="android:textSize">@dimen/regular</item>
+    </style>
+
+    <style name="large_poppins_reg" parent="poppins_regular">
+        <item name="android:textSize">@dimen/large</item>
+    </style>
+
+    <style name="ex_large_poppins_reg" parent="poppins_regular">
+        <item name="android:textSize">@dimen/extra_large</item>
+    </style>
+
+    <style name="huge_poppins_reg" parent="poppins_regular">
+        <item name="android:textSize">@dimen/huge</item>
+    </style>
+
+
+    <!--style for poppins medium-->
+    <style name="tiny_poppins_medium" parent="poppins_medium">
+        <item name="android:textSize">@dimen/tiny</item>
+    </style>
+
+    <style name="small_poppinsl_medium" parent="poppins_medium">
+        <item name="android:textSize">@dimen/small</item>
+    </style>
+
+    <style name="reg_poppins_medium" parent="poppins_medium">
+        <item name="android:textSize">@dimen/regular</item>
+    </style>
+
+    <style name="medium_poppins_medium" parent="poppins_medium">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <style name="large_poppins_medium" parent="poppins_medium">
+        <item name="android:textSize">@dimen/large</item>
+    </style>
+
+    <style name="ex_large_poppins_medium" parent="poppins_medium">
+        <item name="android:textSize">@dimen/extra_large</item>
+    </style>
+
+    <style name="huge_poppins_medium" parent="poppins_medium">
+        <item name="android:textSize">@dimen/huge</item>
+    </style>
+
+
+    <!--style for poppins bold-->
+    <style name="tiny_poppins_bold" parent="poppins_bold">
+        <item name="android:textSize">@dimen/tiny</item>
+    </style>
+
+    <style name="small_poppins_bold" parent="poppins_bold">
+        <item name="android:textSize">@dimen/small</item>
+    </style>
+
+    <style name="reg_poppins_bold" parent="poppins_bold">
+        <item name="android:textSize">@dimen/regular</item>
+    </style>
+
+    <style name="medium_poppins_bold" parent="poppins_bold">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <style name="large_poppins_bold" parent="poppins_bold">
+        <item name="android:textSize">@dimen/large</item>
+    </style>
+
+    <style name="ex_large_poppins_bold" parent="poppins_bold">
+        <item name="android:textSize">@dimen/extra_large</item>
+    </style>
+
+    <style name="huge_poppins_bold" parent="poppins_bold">
+        <item name="android:textSize">@dimen/huge</item>
+    </style>
+
+
+    <!--[END] Font styles-->
+
+
+    <style name="blueButton" parent="poppins_semi_bold">
+        <item name="android:background">@drawable/blue_solid_rounded</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:foreground">?selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="editTextStyle" parent="small_poppinsl_medium">
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:background">@drawable/single_bottom_edit_text</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/edit_text_color</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:padding">@dimen/_7sdp</item>
+    </style>
+
+    <style name="titleStyle" parent="poppins_semi_bold">
+        <item name="android:textSize">@dimen/large</item>
+        <item name="android:textColor">@color/blue_text</item>
+    </style>
+
+
+    <style name="CustomChipChoice" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/background_color_chip_state_list</item>
+        <item name="android:textColor">@color/text_color_chip_state_list</item>
+    </style>
+
+    <style name="CustomChipFilter" parent="@style/Widget.MaterialComponents.Chip.Entry">
+        <item name="chipBackgroundColor">@color/background_color_chip_state_list</item>
+        <item name="android:textColor">@color/text_color_chip_state_list</item>
+    </style>
+
+    <style name="MyRadioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/valet_selector</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <!--  <item name="android:backgroundDimEnabled">false</item>-->
+    </style>
+</resources>

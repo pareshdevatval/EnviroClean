@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_bg_2"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        tools:context=".ui.activity.PayStubActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSelectedCom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSelectedCom"
+                style="@style/poppins_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:drawableEnd="@drawable/ic_select_commnity"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="@string/lbl_selected_community"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clSelectedCom">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etSchName"
+                style="@style/poppins_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:background="@null"
+                android:hint="@string/lbl_schedule_name"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColorHint="@color/Black_title"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/Black_title"
+                app:layout_constraintEnd_toEndOf="@id/etSchName"
+                app:layout_constraintStart_toStartOf="@id/etSchName"
+                app:layout_constraintTop_toBottomOf="@+id/etSchName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInTime"
+                style="@style/poppins_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:drawableEnd="@drawable/ic_clockin_createschedule"
+                android:drawablePadding="@dimen/_9sdp"
+                android:text="@string/lbl_clock_in_time"
+                android:textColor="@color/Black_title"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="@id/etSchName"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOutTime"
+                style="@style/poppins_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:paddingStart="@dimen/_7sdp"
+                android:drawableEnd="@drawable/ic_clockin_createschedule"
+                android:drawablePadding="@dimen/_9sdp"
+                android:text="@string/lbl_clock_out_time"
+                android:textColor="@color/Black_title"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toEndOf="@id/etSchName"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/tvDayOfWeek"
+                android:drawablePadding="@dimen/_5sdp"
+                android:textSize="@dimen/_14ssp"
+                style="@style/MyRadioButtonStyle"
+                android:paddingLeft="10dp"
+                android:text="@string/lbl_day_of_week"
+                android:textColor="@color/Black_title"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintStart_toStartOf="@id/etSchName"
+                app:layout_constraintTop_toBottomOf="@id/tvInTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDays"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/etSchName"
+                app:layout_constraintStart_toStartOf="@id/etSchName"
+                app:layout_constraintTop_toBottomOf="@id/tvDayOfWeek" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                style="@style/blueButton"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_submit"
+                app:layout_constraintEnd_toEndOf="@id/etSchName"
+                app:layout_constraintStart_toStartOf="@id/etSchName"
+                app:layout_constraintTop_toBottomOf="@id/rvDays" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
